@@ -1,9 +1,12 @@
 {
- "version": "2.6.2",
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "",
   "summary": {
     "title": "Seguridad de la información del sistema de evaluación docente (FCBI)",
     "owner": "Universidad de los Llanos - Seguridad de la Información (603705) 2026-II",
-    "description": "Modelo de amenazas STRIDE del sistema de información académico para la evaluación docente de la Facultad de Ciencias Básicas e Ingeniería: registro de datos, diligenciamiento, consulta y reportes, y copias de seguridad. Valoración del riesgo previa a los controles propuestos. Riesgo = Probabilidad x Impacto (bajo 1-2, medio 3-4, alto 6-9)."
+    "description": "Modelo de amenazas STRIDE del sistema de información académico para la evaluación docente de la Facultad de Ciencias Básicas e Ingeniería: registro de datos, diligenciamiento, consulta y reportes, y copias de seguridad. Valoración del riesgo previa a los controles propuestos. Riesgo = Probabilidad x Impacto (bajo 1-2, medio 3-4, alto 6-9).",
+    "id": 0
   },
   "detail": {
     "contributors": [
@@ -13,12 +16,12 @@
     ],
     "diagrams": [
       {
-        "id": 0,
+        "id": 1,
         "title": "Evaluación docente - flujo de datos",
         "diagramType": "STRIDE",
-        "placeholder": "Nuevo diagrama STRIDE",
+        "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "version": "2.1.2",
+        "version": "2.6.2",
         "cells": [
           {
             "position": {
@@ -1821,7 +1824,7 @@
         ]
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 3,
     "reviewer": "",
     "threatTop": 8
   }
