@@ -3,26 +3,1829 @@
   "release_version": "",
   "released_at": "",
   "summary": {
-    "title": "modelo de amenazas",
-    "owner": "",
-    "description": "",
+    "title": "Seguridad de la información del sistema de evaluación docente (FCBI)",
+    "owner": "Universidad de los Llanos - Seguridad de la Información (603705) 2026-II",
+    "description": "Modelo de amenazas STRIDE del sistema de información académico para la evaluación docente de la Facultad de Ciencias Básicas e Ingeniería: registro de datos, diligenciamiento, consulta y reportes, y copias de seguridad. Valoración del riesgo previa a los controles propuestos. Riesgo = Probabilidad x Impacto (bajo 1-2, medio 3-4, alto 6-9).",
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Jhojan Andrés Grisales"
+      }
+    ],
     "diagrams": [
       {
         "id": 3,
-        "title": "New STRIDE diagram",
+        "title": "Evaluación docente - flujo de datos",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.6.2",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 42,
+              "y": 86
+            },
+            "size": {
+              "width": 269,
+              "height": 698
+            },
+            "attrs": {
+              "headerText": {
+                "text": "Usuarios y terceros (campus / Internet)"
+              },
+              "body": {
+                "stroke": "#C0392B",
+                "strokeWidth": 2,
+                "strokeDasharray": "6 4"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "5e5c5e89-aa66-5dc7-8d56-6daea80b9d41",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Usuarios y terceros (campus / Internet)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 350,
+              "y": 86
+            },
+            "size": {
+              "width": 363,
+              "height": 797
+            },
+            "attrs": {
+              "headerText": {
+                "text": "Servicios web del SIAU (zona de aplicación)"
+              },
+              "body": {
+                "stroke": "#C0392B",
+                "strokeWidth": 2,
+                "strokeDasharray": "6 4"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "b9a53211-9572-5be3-9dd4-65e569307399",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Servicios web del SIAU (zona de aplicación)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 784,
+              "y": 86
+            },
+            "size": {
+              "width": 385,
+              "height": 797
+            },
+            "attrs": {
+              "headerText": {
+                "text": "Red interna de TI (almacenes de datos)"
+              },
+              "body": {
+                "stroke": "#C0392B",
+                "strokeWidth": 2,
+                "strokeDasharray": "6 4"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "8208cd0c-cc15-528f-8be8-c174e585c647",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Red interna de TI (almacenes de datos)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 160
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Tercero no autorizado (credencial ajena)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "edb10aef-8206-54bd-84c5-870d88eb519b",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Tercero no autorizado (credencial ajena)",
+              "description": "Persona externa que usa credenciales ajenas para ingresar al portal del SIAU.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 287
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Administrador de TI"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "ee4f9113-fba1-5eac-915e-cee800b27f5d",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Administrador de TI",
+              "description": "Gestiona cuentas, roles y permisos.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 413
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Secretaría (programa / decanatura)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "2245fe2c-356d-500a-9c11-e3129df50d64",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Secretaría (programa / decanatura)",
+              "description": "Registra cuentas institucionales y asignaciones de cursos.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 490
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Tercero no autorizado (tráfico automatizado)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "4999e98f-69ea-58b6-a7fb-2290a33404c8",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Tercero no autorizado (tráfico automatizado)",
+              "description": "Mismo actor de amenaza: genera tráfico automatizado contra el portal de evaluación.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 572
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Estudiante"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "4f989fac-b498-5e88-ba90-b06e18db122a",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Estudiante",
+              "description": "Diligencia la evaluación docente.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 640
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Decanatura / dirección de programa"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "c7e5a9ca-03e9-50f2-b1ec-ac2edc161b05",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Decanatura / dirección de programa",
+              "description": "Consulta resultados y reportes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 101,
+              "y": 716
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Profesor"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "b74a83b3-2340-5e87-a5ae-fa52b38fe996",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Profesor",
+              "description": "Consulta su resultado individual.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 145
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P1 Inicio de sesión SIAU"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "6375cdd9-b837-5ac9-a4d6-ae200d4e6059",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Process",
+              "name": "P1 Inicio de sesión SIAU",
+              "description": "Autenticación de usuarios institucionales en el SIAU. Actividad de soporte de todo el sistema; todos los usuarios institucionales se autentican por P1 antes de usar P2–P6.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": [
+                {
+                  "id": "a326ca99-2909-5287-a781-f1d1253944f6",
+                  "title": "T01 · Suplantación de una cuenta institucional",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Una persona actúa con la identidad ajena y puede consultar o editar registros (C, I). Vector: ingreso al portal con credenciales de otra cuenta. Actor: tercero con una credencial ajena. Actividad: AC-01. Activo: INF-01. Probabilidad 2 / Impacto 3 / Riesgo 6 (Alto).",
+                  "mitigation": "CT-01 Autenticación de dos factores: reutilizar el segundo factor institucional para las cuentas con acceso al módulo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "6"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 272
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P5 Gestión de roles"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "74a4aa03-3493-544b-8c0b-531ba005ed0e",
+            "zIndex": 9,
+            "data": {
+              "type": "tm.Process",
+              "name": "P5 Gestión de roles",
+              "description": "Concesión y cambio de roles y permisos de las cuentas.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": [
+                {
+                  "id": "81a287c0-28e5-50c9-bcef-e9b4e0b9e790",
+                  "title": "T06 · Obtención de permisos de exportación",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Una cuenta obtiene permiso de exportación global y extrae reportes de la facultad (C). Vector: concesión de un rol de mayor alcance sin aprobación. Actor: usuario con gestión limitada de permisos. Actividad: AC-03. Activo: INF-04. Probabilidad 1 / Impacto 3 / Riesgo 3 (Medio).",
+                  "mitigation": "CT-07 Aprobación de permisos: Decanatura aprueba antes de la asignación por TI y se registra el cambio.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "3"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 398
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P2 Registro de datos (AC-01)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "d74d2042-627b-55fc-a36e-25cf5bebaf19",
+            "zIndex": 10,
+            "data": {
+              "type": "tm.Process",
+              "name": "P2 Registro de datos (AC-01)",
+              "description": "Registro de cuentas institucionales y asignaciones de cursos, docentes y estudiantes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": [
+                {
+                  "id": "a056ad89-1d15-533d-bd16-e3ea7d800e7f",
+                  "title": "T02 · Cambio indebido de asignaciones",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un cambio inválido deja habilitada una evaluación para el curso o docente equivocado (I). Vector: envío de solicitudes web anómalas o de cambios que incumplen las reglas académicas. Actor: usuario del módulo con acceso al formulario. Actividad: AC-01. Activo: INF-02. Probabilidad 2 / Impacto 3 / Riesgo 6 (Alto).",
+                  "mitigation": "CT-02 Validación de asignaciones (curso, docente, estudiante, período y permiso de modificación) y CT-03 WAF (ModSecurity + OWASP CRS).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "6"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 525
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P3 Portal de evaluación (AC-02)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "c12d301a-5c69-5a4c-a1d1-456d3245e247",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3 Portal de evaluación (AC-02)",
+              "description": "Recepción de los formularios de evaluación y emisión de constancias.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": [
+                {
+                  "id": "854c2cd9-a1b7-5ba6-9de4-0cf9a955eb6b",
+                  "title": "T03 · Saturación del formulario",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "El portal deja de recibir respuestas durante el cierre del período (D). Vector: tráfico automatizado en alto volumen, que puede incluir solicitudes anómalas. Actor: tercero que genera tráfico automatizado. Actividad: AC-02. Activo: INF-03. Probabilidad 3 / Impacto 3 / Riesgo 9 (Alto).",
+                  "mitigation": "CT-03 WAF (ModSecurity + OWASP CRS) y CT-04 límite de solicitudes por origen con alertas por errores y tiempos de respuesta.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "9"
+                },
+                {
+                  "id": "9c7f1bd4-37ef-54cb-8932-6999cc916965",
+                  "title": "T04 · Disputa sobre la recepción de una evaluación",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Una controversia por un envío queda sin evidencia verificable de recepción (I de la constancia). Vector: envío por un flujo que no conserva comprobante verificable. Actor: participante con acceso al formulario. Actividad: AC-02. Activo: INF-03. Probabilidad 2 / Impacto 2 / Riesgo 4 (Medio).",
+                  "mitigation": "CT-05 Constancia de recepción: guardar código, fecha y estado en el comprobante y en una bitácora protegida, sin copiar las respuestas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "4"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 651
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P4 Consulta y reportes (AC-03)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "9a169f54-2acb-5b58-b89b-7901297ad1de",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "P4 Consulta y reportes (AC-03)",
+              "description": "Consulta y generación de reportes individuales y consolidados.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": [
+                {
+                  "id": "704cd547-8e71-5254-8131-6e7724b9f327",
+                  "title": "T05 · Divulgación de reportes fuera del programa",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un usuario visualiza resultados individuales de un conjunto ajeno a su ámbito (C). Vector: consulta del reporte con verificación incompleta del ámbito permitido. Actor: usuario institucional con acceso a otros reportes. Actividad: AC-03. Activo: INF-04. Probabilidad 2 / Impacto 3 / Riesgo 6 (Alto).",
+                  "mitigation": "CT-06 Consulta según el ámbito: comprobar en el servidor el rol y el alcance de cada consulta o descarga.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "6"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 486,
+              "y": 778
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P6 Copias de seguridad (AC-04)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "64656347-caed-529d-b7b3-bfaea6721865",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Process",
+              "name": "P6 Copias de seguridad (AC-04)",
+              "description": "Generación de copias fechadas de registros, respuestas y reportes.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isOnlyPrivate": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 831,
+              "y": 223
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "INF-01 Registro de cuentas"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "7e0d23aa-ab3b-5e0d-9365-dc140c6e7377",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Store",
+              "name": "INF-01 Registro de cuentas",
+              "description": "Directorio de cuentas del SIAU: identificador, estado y rol.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 831,
+              "y": 476
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "INF-02 Carga académica"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "fd82e189-8b10-5d9c-9b01-529fba018291",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Store",
+              "name": "INF-02 Carga académica",
+              "description": "Base de datos académica del SIAU: relaciones entre cursos, docentes y estudiantes por período.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 831,
+              "y": 603
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "INF-03 Respuestas de evaluación"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "84133732-8142-522a-a955-28047569e3e5",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Store",
+              "name": "INF-03 Respuestas de evaluación",
+              "description": "Base de datos del módulo de evaluación: valoraciones enviadas y constancias de recepción.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 831,
+              "y": 696
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "INF-04 Reportes de resultados"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "50606194-e2fc-5d15-a7dc-8d9e645ccb44",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Store",
+              "name": "INF-04 Reportes de resultados",
+              "description": "Repositorio de reportes en PDF, individuales y consolidados.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 831,
+              "y": 793
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "INF-05 Archivos de respaldo"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "67a8e77c-463f-5fea-85dd-0bca244f57b1",
+            "zIndex": 18,
+            "data": {
+              "type": "tm.Store",
+              "name": "INF-05 Archivos de respaldo",
+              "description": "Repositorio primario de copias cifradas.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "0f1de643-f898-5fe8-b204-7d412f9096b2",
+                  "title": "T07 · Alteración de un respaldo",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Una copia se modifica y la restauración puede incorporar datos incorrectos (I). Vector: escritura sobre una copia ya generada. Actor: cuenta con acceso de escritura. Actividad: AC-04. Activo: INF-05. Probabilidad 1 / Impacto 3 / Riesgo 3 (Medio).",
+                  "mitigation": "CT-08 Verificación de copias y versiones (versionado y huellas de integridad) y CT-10 prueba de restauración en ambiente aislado.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "3"
+                },
+                {
+                  "id": "6b8ffd9f-5b78-57c1-83a6-33c95330263a",
+                  "title": "T08 · Pérdida de acceso a las copias",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "La eliminación de copias impide recuperar los datos del período (D). Vector: supresión de copias sin otra ubicación recuperable. Actor: cuenta con permiso de borrado. Actividad: AC-04. Activo: INF-05. Probabilidad 1 / Impacto 3 / Riesgo 3 (Medio).",
+                  "mitigation": "CT-09 Respaldo independiente (copia cifrada, credenciales separadas y resguardo desconectado) y CT-10 prueba de restauración.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "3"
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 19,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "credenciales (propias o ajenas)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "c29a7d79-62f9-5cc5-83d9-c8b5f2678a15",
+            "labels": [
+              "credenciales (propias o ajenas)"
+            ],
+            "source": {
+              "cell": "edb10aef-8206-54bd-84c5-870d88eb519b"
+            },
+            "target": {
+              "cell": "6375cdd9-b837-5ac9-a4d6-ae200d4e6059"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 20,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "solicitud de rol o permiso",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d2e17017-ee25-531e-b1b5-502a97425618",
+            "labels": [
+              "solicitud de rol o permiso"
+            ],
+            "source": {
+              "cell": "ee4f9113-fba1-5eac-915e-cee800b27f5d"
+            },
+            "target": {
+              "cell": "74a4aa03-3493-544b-8c0b-531ba005ed0e"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 21,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "cuentas y asignaciones",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a49a6479-e7b6-51ee-a252-a837ed5b0914",
+            "labels": [
+              "cuentas y asignaciones"
+            ],
+            "source": {
+              "cell": "2245fe2c-356d-500a-9c11-e3129df50d64"
+            },
+            "target": {
+              "cell": "d74d2042-627b-55fc-a36e-25cf5bebaf19"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 22,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "tráfico automatizado",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "080113e0-e39d-573a-9493-17ce0b622272",
+            "labels": [
+              "tráfico automatizado"
+            ],
+            "source": {
+              "cell": "4999e98f-69ea-58b6-a7fb-2290a33404c8"
+            },
+            "target": {
+              "cell": "c12d301a-5c69-5a4c-a1d1-456d3245e247"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 23,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "respuestas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "712d27ee-c4ba-5fd8-a24d-acd0e551a2f1",
+            "labels": [
+              "respuestas"
+            ],
+            "source": {
+              "cell": "4f989fac-b498-5e88-ba90-b06e18db122a"
+            },
+            "target": {
+              "cell": "c12d301a-5c69-5a4c-a1d1-456d3245e247"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "constancia",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ee1be36c-194a-5784-a085-22188555f8d5",
+            "labels": [
+              "constancia"
+            ],
+            "source": {
+              "cell": "c12d301a-5c69-5a4c-a1d1-456d3245e247"
+            },
+            "target": {
+              "cell": "4f989fac-b498-5e88-ba90-b06e18db122a"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 25,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "consulta / reporte",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ddd166d4-9688-5a25-adc2-38f1ee313952",
+            "labels": [
+              "consulta / reporte"
+            ],
+            "source": {
+              "cell": "c7e5a9ca-03e9-50f2-b1ec-ac2edc161b05"
+            },
+            "target": {
+              "cell": "9a169f54-2acb-5b58-b89b-7901297ad1de"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 26,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "consulta / resultado",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "680218fe-4bdf-5f00-9ac9-67b45ad6ae6e",
+            "labels": [
+              "consulta / resultado"
+            ],
+            "source": {
+              "cell": "b74a83b3-2340-5e87-a5ae-fa52b38fe996"
+            },
+            "target": {
+              "cell": "9a169f54-2acb-5b58-b89b-7901297ad1de"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 27,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "consulta de cuentas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "de14a7bd-1fbc-5666-a5c0-4bc291055a2a",
+            "labels": [
+              "consulta de cuentas"
+            ],
+            "source": {
+              "cell": "6375cdd9-b837-5ac9-a4d6-ae200d4e6059"
+            },
+            "target": {
+              "cell": "7e0d23aa-ab3b-5e0d-9365-dc140c6e7377"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 28,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "roles y estados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "f90fc76a-9829-5d29-8ed3-dc60ddf50b09",
+            "labels": [
+              "roles y estados"
+            ],
+            "source": {
+              "cell": "74a4aa03-3493-544b-8c0b-531ba005ed0e"
+            },
+            "target": {
+              "cell": "7e0d23aa-ab3b-5e0d-9365-dc140c6e7377"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 29,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "cuentas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "2fee5312-9280-572b-a7f1-e0b08a6d9113",
+            "labels": [
+              "cuentas"
+            ],
+            "source": {
+              "cell": "d74d2042-627b-55fc-a36e-25cf5bebaf19"
+            },
+            "target": {
+              "cell": "7e0d23aa-ab3b-5e0d-9365-dc140c6e7377"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 30,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "asignaciones",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "71ea56dc-2e1e-5049-bf2e-84cb6a6d3d1a",
+            "labels": [
+              "asignaciones"
+            ],
+            "source": {
+              "cell": "d74d2042-627b-55fc-a36e-25cf5bebaf19"
+            },
+            "target": {
+              "cell": "fd82e189-8b10-5d9c-9b01-529fba018291"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 31,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "habilita la evaluación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6ccba93c-6aca-5517-97f3-d57282d03f8d",
+            "labels": [
+              "habilita la evaluación"
+            ],
+            "source": {
+              "cell": "fd82e189-8b10-5d9c-9b01-529fba018291"
+            },
+            "target": {
+              "cell": "c12d301a-5c69-5a4c-a1d1-456d3245e247"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 32,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "respuestas y constancias",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9e0f4267-0098-5a8a-9e33-9fee8ed7e912",
+            "labels": [
+              "respuestas y constancias"
+            ],
+            "source": {
+              "cell": "c12d301a-5c69-5a4c-a1d1-456d3245e247"
+            },
+            "target": {
+              "cell": "84133732-8142-522a-a955-28047569e3e5"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 33,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "resultados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "132bff5d-3476-5c80-bd4d-daf78b7bfdd3",
+            "labels": [
+              "resultados"
+            ],
+            "source": {
+              "cell": "84133732-8142-522a-a955-28047569e3e5"
+            },
+            "target": {
+              "cell": "9a169f54-2acb-5b58-b89b-7901297ad1de"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 34,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "reportes",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b5e2e273-8ea4-5c5c-8165-bdfd7f1b05f9",
+            "labels": [
+              "reportes"
+            ],
+            "source": {
+              "cell": "9a169f54-2acb-5b58-b89b-7901297ad1de"
+            },
+            "target": {
+              "cell": "50606194-e2fc-5d15-a7dc-8d9e645ccb44"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 35,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "lectura para respaldo (INF-01)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "75b7bd2f-7b4f-5124-95d5-2f328180749d",
+            "labels": [
+              "lectura para respaldo (INF-01)"
+            ],
+            "source": {
+              "cell": "7e0d23aa-ab3b-5e0d-9365-dc140c6e7377"
+            },
+            "target": {
+              "cell": "64656347-caed-529d-b7b3-bfaea6721865"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 36,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "lectura para respaldo (INF-02)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "d6cd959c-1bbd-5630-a97c-b596819948c8",
+            "labels": [
+              "lectura para respaldo (INF-02)"
+            ],
+            "source": {
+              "cell": "fd82e189-8b10-5d9c-9b01-529fba018291"
+            },
+            "target": {
+              "cell": "64656347-caed-529d-b7b3-bfaea6721865"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 37,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "lectura para respaldo (INF-03)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5321964f-6c1f-51ae-9985-bc3b5b989e38",
+            "labels": [
+              "lectura para respaldo (INF-03)"
+            ],
+            "source": {
+              "cell": "84133732-8142-522a-a955-28047569e3e5"
+            },
+            "target": {
+              "cell": "64656347-caed-529d-b7b3-bfaea6721865"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 38,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "lectura para respaldo (INF-04)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6f936b46-f589-5982-9a7b-12925d9e55b1",
+            "labels": [
+              "lectura para respaldo (INF-04)"
+            ],
+            "source": {
+              "cell": "50606194-e2fc-5d15-a7dc-8d9e645ccb44"
+            },
+            "target": {
+              "cell": "64656347-caed-529d-b7b3-bfaea6721865"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                }
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 39,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "copias fechadas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "f71a26d4-6d0f-589e-94e6-1b1e14cc4803",
+            "labels": [
+              "copias fechadas"
+            ],
+            "source": {
+              "cell": "64656347-caed-529d-b7b3-bfaea6721865"
+            },
+            "target": {
+              "cell": "67a8e77c-463f-5fea-85dd-0bca244f57b1"
+            },
+            "vertices": []
+          }
+        ]
       }
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 8
   }
 }
